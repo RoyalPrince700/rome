@@ -43,7 +43,7 @@ const MobileTrustFlow = () => (
       ))}
     </div>
 
-    <div className='mx-3 mb-3 mt-2 flex items-center justify-between bg-slate-950 px-3 py-2.5 text-xs font-black text-white'>
+    <div className='mx-3 mb-3 mt-2 flex items-center justify-between bg-slate-100 px-3 py-2.5 text-xs font-black text-slate-950'>
       <span className='inline-flex items-center gap-2'>
         <FaStar className='h-3.5 w-3.5' />
         Rome real estate
@@ -56,26 +56,26 @@ const MobileTrustFlow = () => (
 const MobileHero = ({ products }) => (
   <section className='w-full px-3 pt-3 sm:pt-4 lg:hidden'>
     <MobileTrustFlow />
-    <div className='relative overflow-hidden rounded-[2rem] bg-neutral-950 text-white shadow-[0_24px_60px_rgba(15,23,42,0.2)]'>
-      <div className='absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.18),transparent_34%)]' />
+    <div className='relative overflow-hidden rounded-[2rem] bg-[#f5f5f7] text-neutral-950 shadow-[0_24px_60px_rgba(15,23,42,0.1)]'>
+      <div className='absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-white to-transparent' />
       <div className='relative px-4 py-7'>
-        <span className='inline-flex items-center gap-2 border border-white/15 bg-white/10 px-3 py-1.5 text-xs font-black uppercase tracking-[0.22em] text-white'>
-          <FaBolt className='h-3.5 w-3.5' />
+        <span className='inline-flex items-center gap-2 border border-slate-200 bg-white px-3 py-1.5 text-xs font-black uppercase tracking-[0.22em] text-slate-700 shadow-sm'>
+          <FaBolt className='h-3.5 w-3.5 text-slate-950' />
           New real estate platform
         </span>
 
         <h1 className='mt-6 text-4xl font-black leading-[0.92] tracking-[-0.06em]'>
           Find the space that feels built for you.
         </h1>
-        <p className='mt-4 text-sm font-semibold leading-6 text-slate-300'>
+        <p className='mt-4 text-sm font-semibold leading-6 text-slate-600'>
           Browse buildings, bedrooms, kitchens, and living rooms before you buy or rent.
         </p>
 
         <div className='mt-6 flex gap-3'>
-          <Link to='/product-category?all=true' className='flex-1 rounded-full bg-white px-4 py-3 text-center text-xs font-black uppercase tracking-[0.18em] text-slate-950'>
+          <Link to='/product-category?all=true' className='flex-1 rounded-full bg-neutral-950 px-4 py-3 text-center text-xs font-black uppercase tracking-[0.18em] text-white'>
             Explore
           </Link>
-          <Link to='/support' className='flex-1 rounded-full border border-white/20 px-4 py-3 text-center text-xs font-black uppercase tracking-[0.18em] text-white'>
+          <Link to='/support' className='flex-1 rounded-full border border-neutral-300 bg-white/75 px-4 py-3 text-center text-xs font-black uppercase tracking-[0.18em] text-neutral-950'>
             List space
           </Link>
         </div>
