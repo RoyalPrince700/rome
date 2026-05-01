@@ -80,28 +80,28 @@ const ProductDetails = () => {
         .includes(String(data.state).toLowerCase()));
 
   return (
-    <div className="mx-auto max-w-7xl px-3 pt-4 sm:px-6 sm:pt-5 lg:px-8 lg:pt-6">
-      <div className="grid gap-8 lg:grid-cols-[1.15fr,0.85fr]">
-        <div className="space-y-4">
-          <div className="relative h-[420px] overflow-hidden rounded-[2.5rem] bg-neutral-950 shadow-[0_30px_90px_rgba(17,17,17,0.16)] sm:h-[560px] lg:h-[680px]">
+    <div className="mx-auto w-full max-w-7xl overflow-x-hidden px-3 pt-4 sm:px-6 sm:pt-5 lg:px-8 lg:pt-6">
+      <div className="grid min-w-0 gap-8 lg:grid-cols-[1.15fr,0.85fr]">
+        <div className="min-w-0 space-y-4">
+          <div className="relative aspect-[4/3] w-full max-w-full overflow-hidden rounded-[1.75rem] bg-neutral-950 shadow-[0_30px_90px_rgba(17,17,17,0.16)] sm:h-[560px] sm:rounded-[2.5rem] lg:h-[680px]">
             <img
               src={activeImage}
               alt={data?.productName}
-              className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+              className="block h-full w-full max-w-full object-cover transition-transform duration-700 hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/70 via-transparent to-neutral-950/10" />
-            <div className="absolute left-5 top-5 rounded-full border border-white/30 bg-white/20 px-4 py-2 text-[10px] font-black uppercase tracking-[0.24em] text-white backdrop-blur">
+            <div className="absolute left-3 top-3 rounded-full border border-white/30 bg-white/20 px-3 py-1.5 text-[9px] font-black uppercase tracking-[0.2em] text-white backdrop-blur sm:left-5 sm:top-5 sm:px-4 sm:py-2 sm:text-[10px] sm:tracking-[0.24em]">
               Verified Space
             </div>
-            <div className="absolute bottom-6 left-6 right-6 text-white">
-              <p className="text-xs font-black uppercase tracking-[0.28em] text-white/70">{data?.brandName}</p>
-              <h1 className="mt-3 text-4xl font-black leading-[0.92] tracking-[-0.075em] sm:text-6xl">
+            <div className="absolute bottom-4 left-4 right-4 min-w-0 text-white sm:bottom-6 sm:left-6 sm:right-6">
+              <p className="truncate text-[10px] font-black uppercase tracking-[0.22em] text-white/70 sm:text-xs sm:tracking-[0.28em]">{data?.brandName}</p>
+              <h1 className="mt-2 break-words text-3xl font-black leading-[0.94] tracking-[-0.06em] sm:mt-3 sm:text-6xl sm:tracking-[-0.075em]">
                 {data?.productName}
               </h1>
             </div>
           </div>
 
-          <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-none">
+          <div className="flex max-w-full gap-3 overflow-x-auto pb-2 scrollbar-none">
             {data?.productImage?.map((imageURL) => (
               <button
                 key={imageURL}
