@@ -1,0 +1,112 @@
+import {
+  FaBoreHole,
+  FaCar,
+  FaDroplet,
+  FaBolt,
+  FaKitchenSet,
+  FaLeaf,
+  FaLightbulb,
+  FaShieldHalved,
+  FaSolarPanel,
+  FaTowerBroadcast,
+  FaTrash,
+  FaVideo,
+  FaWifi,
+} from 'react-icons/fa6';
+
+export const PROPERTY_AMENITY_ORDER = [
+  'power',
+  'solar',
+  'water',
+  'borehole',
+  'cctv',
+  'security',
+  'parking',
+  'internet',
+  'intercom',
+  'generator',
+  'kitchen',
+  'waste',
+  'greenSpace',
+];
+
+export const PROPERTY_AMENITY_META = {
+  power: {
+    Icon: FaLightbulb,
+    title: 'Power',
+    availableLabel: '24/7 power supply with backup',
+    unavailableLabel: 'Not included on this listing',
+  },
+  solar: {
+    Icon: FaSolarPanel,
+    title: 'Solar',
+    availableLabel: 'Solar panels for lower bills & backup',
+    unavailableLabel: 'No solar on this property',
+  },
+  water: {
+    Icon: FaDroplet,
+    title: 'Water',
+    availableLabel: 'Running treated water throughout',
+    unavailableLabel: 'Water arrangement not listed',
+  },
+  borehole: {
+    Icon: FaBoreHole,
+    title: 'Borehole',
+    availableLabel: 'Borehole supplement for reliability',
+    unavailableLabel: 'No private borehole',
+  },
+  cctv: {
+    Icon: FaVideo,
+    title: 'CCTV',
+    availableLabel: 'CCTV cameras across the compound',
+    unavailableLabel: 'No compound CCTV',
+  },
+  security: {
+    Icon: FaShieldHalved,
+    title: 'Security',
+    availableLabel: 'Gated access / on-site security',
+    unavailableLabel: 'No dedicated estate security listed',
+  },
+  parking: {
+    Icon: FaCar,
+    title: 'Parking',
+    availableLabel: 'Parking space for vehicles',
+    unavailableLabel: 'No dedicated parking',
+  },
+  internet: {
+    Icon: FaWifi,
+    title: 'Internet',
+    availableLabel: 'Fiber-ready / strong connectivity',
+    unavailableLabel: 'Internet not pre-wired',
+  },
+  intercom: {
+    Icon: FaTowerBroadcast,
+    title: 'Intercom',
+    availableLabel: 'Video doorbell / intercom system',
+    unavailableLabel: 'No intercom system',
+  },
+  generator: {
+    Icon: FaBolt,
+    title: 'Generator house',
+    availableLabel: 'Generator slab / housing on site',
+    unavailableLabel: 'No generator housing',
+  },
+  kitchen: {
+    Icon: FaKitchenSet,
+    title: 'Kitchen',
+    availableLabel: 'Fitted kitchen with essentials',
+    unavailableLabel: 'Kitchen not fitted as listed',
+  },
+  waste: {
+    Icon: FaTrash,
+    title: 'Waste',
+    availableLabel: 'Waste management / septic in place',
+    unavailableLabel: 'Waste setup not confirmed',
+  },
+  greenSpace: {
+    Icon: FaLeaf,
+    title: 'Outdoor',
+    availableLabel: 'Green area / usable outdoor space',
+    unavailableLabel: 'Limited private outdoor space',
+  },
+};

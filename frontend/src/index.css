@@ -1,0 +1,184 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-bg: #f4f4f2;
+  --brand-surface: #ffffff;
+  --brand-text: #111111;
+  --brand-muted: #686868;
+  --brand-border: rgba(17, 17, 17, 0.1);
+  --brand-accent: #111111;
+  --brand-accent-strong: #000000;
+  --brand-warm: #c8a46a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background:
+    radial-gradient(circle at top left, rgba(200, 164, 106, 0.12), transparent 34rem),
+    linear-gradient(180deg, #ffffff 0%, var(--brand-bg) 42%, #ffffff 100%);
+  color: var(--brand-text);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: rgba(17, 17, 17, 0.14);
+  color: var(--brand-text);
+}
+
+.brand-btn-primary {
+  @apply inline-flex items-center justify-center rounded-full px-7 py-4 text-xs font-black uppercase tracking-[0.18em] transition-all duration-300;
+  background-color: var(--brand-accent);
+  color: #ffffff;
+  box-shadow: 0 18px 42px rgba(17, 17, 17, 0.18);
+}
+
+.brand-btn-primary:hover {
+  background-color: #2b2b2b;
+  transform: translateY(-1px);
+}
+
+.brand-btn-secondary {
+  @apply inline-flex items-center justify-center rounded-full border px-7 py-4 text-xs font-black uppercase tracking-[0.18em] transition-all duration-300;
+  border-color: var(--brand-border);
+  background-color: rgba(255, 255, 255, 0.72);
+  color: var(--brand-text);
+  backdrop-filter: blur(18px);
+}
+
+.brand-btn-secondary:hover {
+  border-color: #000000;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.brand-badge {
+  @apply inline-flex items-center rounded-full px-4 py-1.5 text-[10px] font-black uppercase;
+  letter-spacing: 0.24em;
+  background-color: rgba(255, 255, 255, 0.74);
+  color: var(--brand-text);
+  border: 1px solid var(--brand-border);
+  backdrop-filter: blur(18px);
+}
+
+.brand-card {
+  @apply rounded-[2rem] border bg-white;
+  border-color: var(--brand-border);
+  box-shadow: 0 24px 70px rgba(17, 17, 17, 0.08);
+}
+
+.brand-glass {
+  @apply border border-white/60 bg-white/70 shadow-[0_24px_70px_rgba(17,17,17,0.08)] backdrop-blur-2xl;
+}
+
+.brand-hero-title {
+  @apply text-5xl font-black leading-[0.9] tracking-[-0.075em] text-neutral-950 sm:text-6xl lg:text-7xl xl:text-8xl;
+}
+
+.brand-link {
+  @apply transition-all duration-200 font-black uppercase tracking-widest text-[10px];
+}
+
+.brand-link:hover {
+  color: var(--brand-accent);
+  transform: translateX(2px);
+}
+
+.page-shell {
+  @apply mx-auto max-w-7xl px-4 pt-28 pb-16 sm:px-6 lg:px-8;
+}
+
+.page-header {
+  @apply mb-12 rounded-none border-2 bg-white px-8 py-10 text-center sm:px-12;
+  border-color: var(--brand-border);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.04);
+}
+
+.page-kicker {
+  @apply inline-flex items-center rounded-none px-3 py-1 text-[10px] font-black uppercase;
+  letter-spacing: 0.24em;
+  background-color: var(--brand-accent);
+  color: #000000;
+}
+
+.page-title {
+  @apply mt-6 text-4xl font-black uppercase tracking-tighter text-slate-950 sm:text-5xl lg:text-6xl;
+}
+
+.page-subtitle {
+  @apply mx-auto mt-6 max-w-2xl text-xs font-bold uppercase tracking-widest leading-relaxed text-slate-500;
+}
+
+.page-grid {
+  @apply grid gap-8 md:grid-cols-2;
+}
+
+.page-card {
+  @apply rounded-none border-2 bg-white p-8 sm:p-10;
+  border-color: var(--brand-border);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.04);
+}
+
+.page-card-muted {
+  @apply rounded-none border-2 p-8 sm:p-10;
+  border-color: #fde68a;
+  background: linear-gradient(180deg, #fffdf7 0%, #fffaf0 100%);
+}
+
+.page-dark-card {
+  @apply rounded-none bg-slate-950 p-8 text-white sm:p-10;
+  box-shadow: 0 20px 48px rgba(15, 23, 42, 0.18);
+}
+
+.page-card-title {
+  @apply mb-6 text-xl font-black uppercase tracking-widest text-slate-950;
+}
+
+.page-copy {
+  @apply text-slate-600 leading-relaxed text-sm font-medium;
+}
+
+.page-list {
+  @apply space-y-4 text-slate-600;
+}
+
+.page-list-item {
+  @apply flex items-start gap-4;
+}
+
+.page-list-bullet {
+  @apply mt-1 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-none text-xs font-black;
+  background-color: var(--brand-accent);
+  color: #000000;
+}
+
+.page-soft-panel {
+  @apply rounded-none border-2 bg-white px-6 py-6;
+  border-color: #fcd34d;
+}
+
+.page-contact-label {
+  @apply font-black uppercase tracking-widest text-amber-500 text-[10px];
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+
